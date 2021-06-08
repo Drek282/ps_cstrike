@@ -1,0 +1,264 @@
+<?xml version="1.0" ?>
+<maps>
+  <map name='cs_assault' gametype='halflife' modtype='cstrike'>
+    <minx>-4250</minx>
+    <miny>3400</miny>
+    <maxx>7530</maxx>
+    <maxy>7250</maxy>
+    <res>485x500</res>
+    <flipv>1</flipv>
+    <fliph>1</fliph>
+  </map>
+  <map name='cs_compound' gametype='halflife' modtype='cstrike'>
+    <minx>290</minx>
+    <miny>-2400</miny>
+    <maxx>5500</maxx>
+    <maxy>3750</maxy>
+    <res>373x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='cs_estate' gametype='halflife' modtype='cstrike'>
+    <minx>-1135</minx>
+    <miny>-2175</miny>
+    <maxx>1311</maxx>
+    <maxy>527</maxy>
+    <res>647x711</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='cs_havana' gametype='halflife' modtype='cstrike'>
+    <minx>-1520</minx>
+    <miny>-1220</miny>
+    <maxx>1700</maxx>
+    <maxy>2300</maxy>
+    <res>497x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='cs_italy' gametype='halflife' modtype='cstrike'>
+    <minx>-1530</minx>
+    <miny>-2100</miny>
+    <maxx>1090</maxx>
+    <maxy>2560</maxy>
+    <res>284x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='cs_office' gametype='halflife' modtype='cstrike'>
+    <minx>-1820</minx>
+    <miny>-2200</miny>
+    <maxx>2350</maxx>
+    <maxy>1300</maxy>
+    <res>598x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='cs_siege' gametype='halflife' modtype='cstrike'>
+    <minx>-2813</minx>
+    <miny>-1391</miny>
+    <maxx>3911</maxx>
+    <maxy>3895</maxy>
+    <res>970x765</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_airstrip' gametype='halflife' modtype='cstrike'>
+    <minx>-3239</minx>
+    <miny>-3279</miny>
+    <maxx>839</maxx>
+    <maxy>2815</maxy>
+    <res>640x968</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_aztec' gametype='halflife' modtype='cstrike'>
+    <minx>-3130</minx>
+    <miny>-1770</miny>
+    <maxx>2980</maxx>
+    <maxy>1500</maxy>
+    <res>917x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_cbble' gametype='halflife' modtype='cstrike'>
+    <minx>-3450</minx>
+    <miny>-2300</miny>
+    <maxx>1530</maxx>
+    <maxy>2950</maxy>
+    <res>475x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_chateau' gametype='halflife' modtype='cstrike'>
+    <minx>-500</minx>
+    <miny>-1450</miny>
+    <maxx>3110</maxx>
+    <maxy>2910</maxy>
+    <res>417x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_dust' gametype='halflife' modtype='cstrike'>
+    <minx>-2100</minx>
+    <miny>-1850</miny>
+    <maxx>2600</maxx>
+    <maxy>3800</maxy>
+    <res>409x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_dust2' gametype='halflife' modtype='cstrike'>
+    <minx>-2240</minx>
+    <miny>-1080</miny>
+    <maxx>1800</maxx>
+    <maxy>3320</maxy>
+    <res>470x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_inferno' gametype='halflife' modtype='cstrike'>
+    <minx>-2000</minx>
+    <miny>-800</miny>
+    <maxx>2800</maxx>
+    <maxy>3640</maxy>
+    <res>535x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_nuke' gametype='halflife' modtype='cstrike'>
+    <minx>-3000</minx>
+    <miny>-2530</miny>
+    <maxx>3690</maxx>
+    <maxy>960</maxy>
+    <res>964x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_piranesi' gametype='halflife' modtype='cstrike'>
+    <minx>-2900</minx>
+    <miny>-930</miny>
+    <maxx>2560</maxx>
+    <maxy>2720</maxy>
+    <res>759x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_prodigy' gametype='halflife' modtype='cstrike'>
+    <minx>-220</minx>
+    <miny>-1640</miny>
+    <maxx>3350</maxx>
+    <maxy>1050</maxy>
+    <res>662x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_seasideresort' gametype='halflife' modtype='cstrike'>
+    <minx>-1820</minx>
+    <miny>-2150</miny>
+    <maxx>2100</maxx>
+    <maxy>4190</maxy>
+    <res>308x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_survivor' gametype='halflife' modtype='cstrike'>
+    <minx>-1903</minx>
+    <miny>-1263</miny>
+    <maxx>3455</maxx>
+    <maxy>3055</maxy>
+    <res>965x764</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_tides' gametype='halflife' modtype='cstrike'>
+    <minx>-1750</minx>
+    <miny>-2000</miny>
+    <maxx>1300</maxx>
+    <maxy>1280</maxy>
+    <res>485x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='de_train' gametype='halflife' modtype='cstrike'>
+    <minx>-2000</minx>
+    <miny>-1800</miny>
+    <maxx>2050</maxx>
+    <maxy>1900</maxy>
+    <res>560x500</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='dm_duel_v2' gametype='halflife' modtype='cstrike'>
+    <minx>-770</minx>
+    <miny>-1209</miny>
+    <maxx>1614</maxx>
+    <maxy>1232</maxy>
+    <res>1002x972</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='fy_beachparty_v1' gametype='halflife' modtype='cstrike'>
+    <minx>-288</minx>
+    <miny>-1008</miny>
+    <maxx>2192</maxx>
+    <maxy>960</maxy>
+    <res>1002x972</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='fy_iceworld' gametype='halflife' modtype='cstrike'>
+    <minx>-752</minx>
+    <miny>-944</miny>
+    <maxx>752</maxx>
+    <maxy>944</maxy>
+    <res>1002x972</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='fy_paintball' gametype='halflife' modtype='cstrike'>
+    <minx>396</minx>
+    <miny>-1740</miny>
+    <maxx>1488</maxx>
+    <maxy>778</maxy>
+    <res>1002x972</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='fy_poolparty_v2' gametype='halflife' modtype='cstrike'>
+    <minx>-264</minx>
+    <miny>-1966</miny>
+    <maxx>718</maxx>
+    <maxy>-205</maxy>
+    <res>1002x972</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='fy_simpsons_h' gametype='halflife' modtype='cstrike'>
+    <minx>-952</minx>
+    <miny>-461</miny>
+    <maxx>952</maxx>
+    <maxy>469</maxy>
+    <res>1002x972</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='fy_xbox' gametype='halflife' modtype='cstrike'>
+    <minx>-1792</minx>
+    <miny>-672</miny>
+    <maxx>496</maxx>
+    <maxy>672</maxy>
+    <res>1002x972</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+  <map name='tc_hydro' gametype='halflife' modtype='cstrike'>
+    <minx>-5928</minx>
+    <miny>-3152</miny>
+    <maxx>6600</maxx>
+    <maxy>2952</maxy>
+    <res>1146x564</res>
+    <flipv>1</flipv>
+    <fliph>0</fliph>
+  </map>
+</maps>
