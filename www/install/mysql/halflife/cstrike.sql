@@ -185,3 +185,7 @@ INSERT INTO `ps_config_overlays` (`id`, `gametype`, `modtype`, `map`, `minx`, `m
         (55, 'halflife', 'cstrike', 'fy_simpsons_h', -952, -461, 952, 469, 1002, 972, 1, 0, 0),
         (56, 'halflife', 'cstrike', 'fy_xbox', -1792, -672, 496, 672, 1002, 972, 1, 0, 0),
         (57, 'halflife', 'cstrike', 'tc_hydro', -5928, -3152, 6600, 2952, 1146, 564, 1, 0, 0);
+        
+INSERT INTO `ps_config` (`id`, `conftype`, `section`, `var`, `value`, `label`, `type`, `locked`, `verifycodes`, `options`, `help`) 
+    VALUES 
+        (1,'main',NULL,'meta_keywords','PsychoStats Game Server Player Statistics Counter-Strike Valve','Site HTML Meta Key Words','text',0,'','','These are the HTML meta key words for your PsychoStats.  They are used by search engines to provide search results.');
