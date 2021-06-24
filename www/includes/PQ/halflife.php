@@ -64,12 +64,12 @@ define("PQ_HL2_SERVERDATA_RESPONSE_VALUE", 	0);
 class PQ_halflife extends PQ_PARENT {
 
 function __construct($conf) {
-	$this->PQ_halflife($conf);
+	$this->conf = $conf;		// always save the config to the class variable first
+	$this->init();			// always run the class initialization method
 }
 
 function PQ_halflife($conf) {
-	$this->conf = $conf;		// always save the config to the class variable first
-	$this->init();			// always run the class initialization method
+    self::__construct($conf);
 }
 
 function init() {

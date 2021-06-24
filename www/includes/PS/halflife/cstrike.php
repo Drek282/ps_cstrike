@@ -47,9 +47,13 @@ var $CLAN_MODTYPES = array(
 	'terroristlost'		=> '+',
 );
 
-function PS_halflife_cstrike(&$db) {
+function __construct(&$db) {
 	parent::PS_halflife($db);
 	$this->CLAN_MAP_MODTYPES = $this->CLAN_MODTYPES;
+}
+
+function PS_halflife_cstrike(&$db) {
+    self::__construct($db);
 }
 
 function get_clan_modtypes() {

@@ -34,8 +34,12 @@ class PS_halflife extends PS {
 
 var $class = 'PS::halflife';
 
-function PS_halflife(&$db) {
+function __construct(&$db) {
 	parent::PS($db);
+}
+
+function PS_halflife(&$db) {
+    self::__construct($db);
 }
 
 function worldid_noun($plural = false) {

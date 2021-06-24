@@ -41,12 +41,12 @@ include_once("halflife.php");
 class PQ_oldhalflife extends PQ_halflife {
 
 function __construct($conf) {
-	$this->PQ_oldhalflife($conf);
+	$this->conf = $conf;		// always save the config to the class variable first
+	$this->init();			// always run the class initialization method
 }
 
 function PQ_oldhalflife($conf) {
-	$this->conf = $conf;		// always save the config to the class variable first
-	$this->init();			// always run the class initialization method
+    self::__construct($conf);
 }
 
 function init() {
