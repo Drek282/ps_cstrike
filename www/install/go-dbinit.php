@@ -198,6 +198,7 @@ function do_init($games, $mods) {
 		}
 
 		// if the table exists and overwrite is true, drop it first.
+		$exists[$table] = $exists[$table] ?? null;
 		if ($exists[$table] and $overwrite and $is_create) {
 			if ($db->droptable($table)) {
 				unset($exists[$table]);
