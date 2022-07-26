@@ -221,6 +221,7 @@ function do_init($games, $mods) {
 				);
 			} else {
 				if ($db->query($sql)) {
+                    $dropped[$table] = $dropped[$table] ?? null;
 					$actions[$table] = array( 'status' => 'good', 'msg' => ($dropped[$table] ? "Rec" : "C") . "reated table '$table'" );
 				} else {
 					$actions[$table] = array( 'status' => 'bad', 'msg' => "Error creating table '$table': " . $db->errstr );
@@ -228,6 +229,7 @@ function do_init($games, $mods) {
 			}
 		} else {
 			// do 'insert' query
+			$ignore[$table] = $ignore[$table] ?? null;
 			if ($ignore[$table]) continue;
 			if ($db->query($sql)) {
 				$actions[$table] = array( 'status' => 'good', 'msg' => "Created and initialized table '$table'" );
