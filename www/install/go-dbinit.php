@@ -213,7 +213,7 @@ function do_init($games, $mods) {
 
 		if ($is_create) {
 			// don't try to create a table that already exists
-			if ($exists[$table]) {
+			if (isset($exists[$table])) {
 				$ignore[$table] = true;
 				$actions[$table] = array(
 					'status' => 'warn',
