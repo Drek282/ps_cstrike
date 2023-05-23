@@ -93,7 +93,7 @@ function gametype() {
 }
 
 function modtype() {
-	$m = $this->data['gamedir'];
+	$m = $this->data['gamedir'] ?? null;
 	switch ($m) {
 		case 'czero': 	return 'cstrike';
 		default: 	return $m;
