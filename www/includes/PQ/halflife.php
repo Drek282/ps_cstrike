@@ -659,7 +659,7 @@ function _sendquery($ipport, $cmd) {
 			$packets[0] = $packet;
 			$expected = 0;
 		}
-		if ($this->DEBUG) print nl2br("\nDEBUG: HexDump \$original: " . $this->hexdump($original) . "\n");
+		if ($this->DEBUG) print nl2br("\n" . $this->hexdump($original) . "\n");
 	} while ($expected and $retry < $this->maxretries());
 
 	fclose($this->sock);
