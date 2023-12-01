@@ -572,8 +572,7 @@ function _sendquery($ipport, $cmd) {
 		}
 
 		$time = sprintf("%0.4f", $this->_getmicrotime() - $start);
-		if ($this->DEBUG) print nl2br("\nDEBUG: ($time latency) Received " . strlen($packet) . " bytes from $ip:$port ...\n");
-		// . $this->hexdump($packet) . "\n";
+		if ($this->DEBUG) print nl2br("\nDEBUG: ($time latency) Received " . strlen($packet) . " bytes from $ip:$port ...\n");// . $this->hexdump($packet) . "\n");
 
 		$header = substr($packet, 0, 4);				// get the 4 byte header
 		// ugly 64bit hack. If the PHP_INT_SIZE is not 4 then we'll use "i" to unpack the header.
