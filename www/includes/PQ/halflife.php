@@ -115,7 +115,7 @@ function _hlver($header=NULL) {
 	if ($header === NULL) {		// if header is still null, we have no packet bytes to check
 		$this->halflife_version = 0;		
 	} else {
-		if ($this->DEBUG) print "DEBUG: Determing halflife version from header packet:\n" . $this->hexdump(substr($header,0,16));
+		if ($this->DEBUG) print nl2br("DEBUG: Determing halflife version from header packet:\n" . $this->hexdump(substr($header,0,16)));
 		$code = @substr($header, 4, 1);
 		if (!$code) {
 			$this->halflife_version = 0;
@@ -174,7 +174,7 @@ function query_info($ip=NULL) {
 
 // internal function to parse halflife verion 1 'info' packets
 function _parse_info_halflife1() {
-	if ($this->DEBUG) print "DEBUG: Parsing Halflife1 info packet...\n";
+	if ($this->DEBUG) print nl2br("DEBUG: Parsing Halflife1 info packet...\n");
 	$this->raw = substr($this->raw, 5);		// strip off response header bytes
 	$this->data['int_ipport'] 	= $this->_getnullstr();
 	list($this->data['int_ip'], $this->data['int_port']) 	= explode(':', $this->data['int_ipport']);
@@ -202,7 +202,7 @@ function _parse_info_halflife1() {
 
 // internal function to parse halflife version 2 'info' packets
 function _parse_info_halflife2() {
-	if ($this->DEBUG) print "DEBUG: Parsing Halflife2 info packet...\n";
+	if ($this->DEBUG) print nl2br("DEBUG: Parsing Halflife2 info packet...\n");
 	$this->raw = substr($this->raw, 5);	// strip off response header bytes
 	$this->data['protocol']			= $this->_getbyte();	// 6
 	$this->data['name'] 			= $this->_getnullstr();
@@ -434,7 +434,7 @@ function _rconread2() {
 
 		$this->raw = @fread($this->rconsock, $size);
 
-		if ($this->DEBUG) print "DEBUG: Received (size: $size):\n" . $this->hexdump($psize . $this->raw) . "\n";
+		if ($this->DEBUG) print nl2br("DEBUG: Received (size: $size):\n" . $this->hexdump($psize . $this->raw) . "\n");
 		$packet = array(
 			'requestid'	=> $this->_getlong(),
 			'responseid'	=> $this->_getlong(),
@@ -464,7 +464,7 @@ function _rconwrite2($cmd, $str1="", $str2="") {
 	$authid = $this->rcon_auth_id;
 	$data = pack("VV", $authid, $cmd) . $str1 . "\0" . $str2 . "\0";
 	$packet = pack("V", strlen($data)) . $data;
-	if ($this->DEBUG) print "DEBUG: Sending rcon packet:\n" . $this->hexdump($packet) . "\n";
+	if ($this->DEBUG) print nl2br("DEBUG: Sending rcon packet:\n" . $this->hexdump($packet) . "\n");
 	return @fwrite($this->rconsock, $packet, strlen($packet));
 }
 
@@ -551,7 +551,7 @@ function _sendquery($ipport, $cmd) {
 	$command = pack("V", -1) . $cmd;
 	$this->raw = "";
 
-	if ($this->DEBUG) print "DEBUG: Sending query to $ip:$port:\n" . $this->hexdump($command) . "\n";
+	if ($this->DEBUG) print nl2br("DEBUG: Sending query to $ip:$port:\n" . $this->hexdump($command) . "\n");
 	fwrite($this->sock, $command, strlen($command));
 	$start = $this->_getmicrotime();
 
@@ -564,7 +564,7 @@ function _sendquery($ipport, $cmd) {
 		$original = $packet;
 		if (strlen($packet) == 0) {
 			$retry++;
-			if ($this->DEBUG) print "DEBUG: Resending query to $ip:$port:\n" . $this->hexdump($command) . "\n";
+			if ($this->DEBUG) print nl2br("DEBUG: Resending query to $ip:$port:\n" . $this->hexdump($command) . "\n");
 			fwrite($this->sock, $command, strlen($command));
 #			$start = $this->_getmicrotime();
 			$total_expected = $expected = 1;
@@ -572,7 +572,8 @@ function _sendquery($ipport, $cmd) {
 		}
 
 		$time = sprintf("%0.4f", $this->_getmicrotime() - $start);
-		if ($this->DEBUG) print "\nDEBUG: ($time latency) Received " . strlen($packet) . " bytes from $ip:$port ...\n"; // . $this->hexdump($packet) . "\n";
+		if ($this->DEBUG) print nl2br("\nDEBUG: ($time latency) Received " . strlen($packet) . " bytes from $ip:$port ...\n");
+		// . $this->hexdump($packet) . "\n";
 
 		$header = substr($packet, 0, 4);				// get the 4 byte header
 		// ugly 64bit hack. If the PHP_INT_SIZE is not 4 then we'll use "i" to unpack the header.
@@ -658,7 +659,7 @@ function _sendquery($ipport, $cmd) {
 			$packets[0] = $packet;
 			$expected = 0;
 		}
-		if ($this->DEBUG) print $this->hexdump($original) . "\n";
+		if ($this->DEBUG) print nl2br("\nDEBUG: HexDump \$original: " . $this->hexdump($original) . "\n");
 	} while ($expected and $retry < $this->maxretries());
 
 	fclose($this->sock);
@@ -698,7 +699,7 @@ function _sendmasterquery($ipport, $startip, $region=0, $filterstr="\0") {
 	$command = '1' . pack("C", $region) . $startip . "\0" . $filterstr;
 	$this->raw = "";
 
-	if ($this->DEBUG) print "DEBUG: Sending query to $ip:$port:\n" . $this->hexdump($command) . "\n";
+	if ($this->DEBUG) print nl2br("DEBUG: Sending query to $ip:$port:\n" . $this->hexdump($command) . "\n");
 	fwrite($this->sock, $command, strlen($command));
 	
 	do {
@@ -710,11 +711,11 @@ function _sendmasterquery($ipport, $startip, $region=0, $filterstr="\0") {
 				return FALSE;
 			}
 			$retry++;
-			if ($this->DEBUG) print "DEBUG: Resending query to $ip:$port:\n" . $this->hexdump($command) . "\n";
+			if ($this->DEBUG) print nl2br("DEBUG: Resending query to $ip:$port:\n" . $this->hexdump($command) . "\n");
 			fwrite($this->sock, $command, strlen($command));
 			continue;
 		} else {
-			if ($this->DEBUG) print "DEBUG: Received " . strlen($this->raw) . " bytes from $ip:$port:\n" . $this->hexdump($this->raw) . "\n";
+			if ($this->DEBUG) print nl2br("DEBUG: Received " . strlen($this->raw) . " bytes from $ip:$port:\n" . $this->hexdump($this->raw) . "\n");
 			break;
 		}
 	} while ($retry < $this->maxretries());
