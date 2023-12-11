@@ -280,9 +280,6 @@ function query_rules($ip=NULL) {
 			if ($this->raw == '') break;
 			$this->data['rules'][ trim($this->_getnullstr()) ] = trim($this->_getnullstr());
 		}
-		echo "<br><textarea rows=\"150\" cols=\"130\">";
-		print_r ($this->data);
-		echo "</textarea>";
 		return $this->data;
 	}
 	return FALSE;
