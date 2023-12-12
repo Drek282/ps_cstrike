@@ -272,7 +272,7 @@ function query_rules($ip=NULL) {
 	$res = $this->_sendquery($ip, $this->rulestr . pack("V", $this->_getchallenge($ip)));
 	if (!$res) return FALSE;
 	if (!empty($this->raw)) {
-		echo "raw is not emppty";
+
 		$this->raw = substr($this->raw, 5);		// strip off response header bytes
 		$this->data['totalrules'] = ($this->_getshort());// | ($this->_getbyte() << 8)) - 1;
 		$this->data['rules'] = array();
