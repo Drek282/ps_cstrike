@@ -132,22 +132,22 @@ sub event {
 	}
 
 	# do some extra processing ...
-=pod
-	if (defined $self->{last_min} and $self->{last_min} != $self->{min}) {
-		# every minute collect some player data
-		$self->{last_min} = $self->{min};
-		$self->{_plrtot} += $self->get_online_count;
-		$self->{_plrcnt}++;
-	}
-	if (defined $self->{last_hour} and ($self->{last_hour} != $self->{hour} or $self->{last_day} != $self->{day})) {
-		print "$self->{hour}: " . int($self->{_plrtot} / $self->{_plrcnt}) . "\n";
-		$self->get_map->hourly('online', int($self->{_plrtot} / $self->{_plrcnt}));
-		$self->{_plrcnt} = 0;
-		$self->{_plrtot} = 0;
-		$self->{last_hour} = $self->{hour};
-		$self->{last_day} = $self->{day};
-	}
-=cut
+#
+#	if (defined $self->{last_min} and $self->{last_min} != $self->{min}) {
+#		# every minute collect some player data
+#		$self->{last_min} = $self->{min};
+#		$self->{_plrtot} += $self->get_online_count;
+#		$self->{_plrcnt}++;
+#	}
+#	if (defined $self->{last_hour} and ($self->{last_hour} != $self->{hour} or $self->{last_day} != $self->{day})) {
+#		print "$self->{hour}: " . int($self->{_plrtot} / $self->{_plrcnt}) . "\n";
+#		$self->get_map->hourly('online', int($self->{_plrtot} / $self->{_plrcnt}));
+#		$self->{_plrcnt} = 0;
+#		$self->{_plrtot} = 0;
+#		$self->{last_hour} = $self->{hour};
+#		$self->{last_day} = $self->{day};
+#	}
+#
 }
 
 sub process_feed {

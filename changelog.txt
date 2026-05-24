@@ -8,3 +8,4 @@ Version 3.2.8n (in progress)
 * [Improved] The CC theme is now a child theme.
 * [Added] Mod logo.
 * [Fixed] Get & respond to challenge from server in PsychoQuery
+* [Improved] [Chore] Make pod2html happy.
